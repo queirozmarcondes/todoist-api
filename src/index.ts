@@ -5,8 +5,17 @@ import connectDB from './infrastructure/configs/mongoose.config';
 import todoistRoutes from './presentation/routes/todoist.routes';
 import { authUserRoutes } from './presentation/routes/auth.routes';
 import { userRoutes } from './presentation/routes/user.routes';
+import cors from 'cors';
 
 const app = express();
+
+// Ativa o CORS antes de qualquer rota
+app.use(cors({
+  origin: "*", // ou defina o domínio específico do seu app se quiser restringir
+}));
+
+// Permitir requisições do tipo OPTIONS (preflight)
+app.options("*", cors());
 
 app.use(express.json());
 connectDB();
