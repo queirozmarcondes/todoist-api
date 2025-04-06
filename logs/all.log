@@ -1,0 +1,21 @@
+2025-04-06 11:35:20:3520 [31merror[39m: [31mFailed to create user: User with email renatodequeirozmarcondes@gmail.com not found[39m
+2025-04-06 11:35:21:3521 [32minfo[39m: [32mUser created: renatodequeirozmarcondes@gmail.com[39m
+2025-04-06 11:48:04:484 [32minfo[39m: [32mUser deleted: renatodequeirozmarcondes@gmail.com[39m
+2025-04-06 11:48:19:4819 [31merror[39m: [31mFailed to find user with email renatodequeirozmarcondes@gmail.com: User with email renatodequeirozmarcondes@gmail.com not found[39m
+2025-04-06 11:48:20:4820 [32minfo[39m: [32mUser created: renatodequeirozmarcondes@gmail.com[39m
+2025-04-06 11:51:49:5149 [32minfo[39m: [32mUser deleted: renatodequeirozmarcondes@gmail.com[39m
+2025-04-06 11:52:03:523 [31merror[39m: [31m[UserRepository] Failed to query user by email renatodequeirozmarcondes@gmail.com: UserNotFoundError: User with email renatodequeirozmarcondes@gmail.com not found[39m
+2025-04-06 11:55:59:5559 [31merror[39m: [31m[UserRepository] Failed to query user by email renatodequeirozmarcondes@gmail.com: UserNotFoundError: User with email renatodequeirozmarcondes@gmail.com not found[39m
+2025-04-06 12:09:47:947 [32minfo[39m: [32mUser created: renatodequeirozmarcondes@gmail.com[39m
+2025-04-06 12:12:17:1217 [33mwarn[39m: [33m[UserService] Tentativa de cadastro com e-mail já existente: renatodequeirozmarcondes@gmail.com[39m
+2025-04-06 12:12:42:1242 [32minfo[39m: [32mUser created: renatodequeirozmarcondes1@gmail.com[39m
+2025-04-06 14:15:37:1537 [31merror[39m: [31mFailed to create user: Cast to ObjectId failed for value "67f2a7fa174b61fed5361e4cs" (type string) at path "_id" for model "User"[39m
+2025-04-06 14:16:53:1653 [31merror[39m: [31mFailed to create user: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: todoist.users index: email_1 dup key: { email: "user@example.com" }[39m
+2025-04-06 14:18:18:1818 [32minfo[39m: [32mUser updated: user@example1.com[39m
+2025-04-06 14:18:31:1831 [32minfo[39m: [32mUser deleted: user@example1.com[39m
+2025-04-06 14:43:58:4358 [32minfo[39m: [32mUser deleted: user@example.com[39m
+2025-04-06 14:53:24:5324 [32minfo[39m: [32mUser created: renatodequeirozmarcondes@gmail.com[39m
+2025-04-06 15:40:03:403 [32minfo[39m: [32mUser created: user@example.com[39m
+2025-04-06 15:40:34:4034 [32minfo[39m: [32mUser updated: user@example.com[39m
+2025-04-06 15:40:41:4041 [32minfo[39m: [32mUser deleted: user@example.com[39m
+2025-04-06 15:40:59:4059 [31merror[39m: [31mFailed to create user: User with ID 67f2d893438b76f4a72d1752 not found[39m

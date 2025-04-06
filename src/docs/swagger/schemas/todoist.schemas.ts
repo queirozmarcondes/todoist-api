@@ -26,8 +26,6 @@ export const todoistSchema = {
         type: 'object',
         required: ['title', 'completed'],
         properties: {
-            id: { type: 'string', description: 'ID único do Todoist' },
-            title: { type: 'string', description: 'O título do Todoist' },
             description: { type: 'string', description: 'Descrição do Todoist' },
             completed: { type: 'boolean', description: 'Se o Todoist foi concluído' },
         },

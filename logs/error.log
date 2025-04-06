@@ -1,0 +1,7 @@
+2025-04-06 11:35:20:3520 [31merror[39m: [31mFailed to create user: User with email renatodequeirozmarcondes@gmail.com not found[39m
+2025-04-06 11:48:19:4819 [31merror[39m: [31mFailed to find user with email renatodequeirozmarcondes@gmail.com: User with email renatodequeirozmarcondes@gmail.com not found[39m
+2025-04-06 11:52:03:523 [31merror[39m: [31m[UserRepository] Failed to query user by email renatodequeirozmarcondes@gmail.com: UserNotFoundError: User with email renatodequeirozmarcondes@gmail.com not found[39m
+2025-04-06 11:55:59:5559 [31merror[39m: [31m[UserRepository] Failed to query user by email renatodequeirozmarcondes@gmail.com: UserNotFoundError: User with email renatodequeirozmarcondes@gmail.com not found[39m
+2025-04-06 14:15:37:1537 [31merror[39m: [31mFailed to create user: Cast to ObjectId failed for value "67f2a7fa174b61fed5361e4cs" (type string) at path "_id" for model "User"[39m
+2025-04-06 14:16:53:1653 [31merror[39m: [31mFailed to create user: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: todoist.users index: email_1 dup key: { email: "user@example.com" }[39m
+2025-04-06 15:40:59:4059 [31merror[39m: [31mFailed to create user: User with ID 67f2d893438b76f4a72d1752 not found[39m
