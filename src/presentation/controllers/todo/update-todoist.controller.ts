@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import { TodoistService } from '../../../application/use-cases/todoist.service';
+import { TodoistService } from '../../../application/services/todoist.service';
 
 const todoistService = new TodoistService();
 

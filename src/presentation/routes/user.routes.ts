@@ -6,7 +6,7 @@ import { GetUserByIdController } from "../controllers/users/get.user.by.id.contr
 import { UpdateUserController } from "../controllers/users/update.user.controller";
 import { DeleteUserController } from "../controllers/users/delete.user.controller";
 
-import { UserService } from "../../application/use-cases/users.service";
+import { UserService } from "../../application/services/users.service";
 import { UserRepository } from "../../infrastructure/database/repositories/user.repository";
 
 const router = Router();

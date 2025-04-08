@@ -2,6 +2,7 @@ import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
 import { authConfig } from "../configs/jwt.js";
 import { IUserRepository } from "../../domain/interfaces/repositories/interface.user.repository.js";
+import { IUser } from "../../domain/entities/user.model.js";
 
 interface JwtPayload {
     id: string;
@@ -13,28 +14,38 @@ export class AuthService {
     constructor(userRepository: IUserRepository) {
         this.userRepository = userRepository;
     }
-
     async login(
         email: string,
         password: string,
-    ): Promise<{ accessToken: string; refreshToken: string } | null> {
+    ): Promise<{ accessToken: string; refreshToken: string; user: Partial<IUser> } | null> {
         const user = await this.userRepository.findByEmail(email);
+
         if (!user || !(await bcrypt.compare(password, user.password))) {
             return null;
         }
 
-        // Gera o access token (válido por 15 minutos)
         const accessToken = jwt.sign({ id: user._id }, authConfig.jwtSecret, {
             expiresIn: "15m",
         });
 
-        // Gera o refresh token (válido por 7 dias)
         const refreshToken = jwt.sign({ id: user._id }, authConfig.jwtRefreshSecret, {
             expiresIn: "7d",
         });
 
-        return { accessToken, refreshToken };
+        // Retorna os tokens e dados do usuário (sem senha!)
+        const { _id, name, email: userEmail } = user;
+
+        return {
+            accessToken,
+            refreshToken,
+            user: {
+                id: _id,
+                name,
+                email: userEmail,
+            },
+        };
     }
+
 
     async refreshToken(
         refreshToken: string,
